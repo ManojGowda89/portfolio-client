@@ -1,0 +1,22 @@
+
+h6 {
+    margin:20px
+}
+
+
+.div-footer{
+    display: flex;
+    direction: column;
+ justify-content: center;
+ padding: 20px;
+}
+
+.div-footer :hover{
+    border-bottom: 2px solid black;
+}
+
+
+.hover-header :hover{
+    border-bottom: 1px solid black;
+
+}
