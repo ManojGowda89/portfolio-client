@@ -85,13 +85,13 @@ export function ContextProvider({children}) {
           setcolor("#fff")
           settogle(false)
          
-          localStorage.setItem("color" ,toglemode)
+         
       }
       if(color=="#fff"){
           setcolor("#333")
           settogle(true)
           
-          localStorage.setItem("color" ,toglemode)
+          
       }
 
     

@@ -13,7 +13,8 @@ import Layout from "../components/Layout.jsx";
 export default function Admin() {
   const { toglemode } = useMyContext();
 
-  const { user, SignOutfn, uploadimg, resimg } = useMyContext();
+  const {  SignOutfn, uploadimg, resimg } = useMyContext();
+
 
   const [load, setload] = useState(false);
   const [projectName, setProjectName] = useState("");
@@ -98,7 +99,7 @@ export default function Admin() {
     return <Loadingreact />;
   }
 
-  if (user) {
+ 
     return (
       <Layout title="Add Projects">
       
@@ -274,9 +275,5 @@ export default function Admin() {
         </Container>
       </Layout>
     );
-  } else {
-    return (
-     <Loadingreact/>
-    );
-  }
-}
+  } 
+
