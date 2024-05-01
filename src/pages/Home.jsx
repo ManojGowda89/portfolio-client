@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <Layout title="Home">
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center" ,height: "auto"}}>
         <h1 style={{ color: toglemode ? "#333" : "#fff" }}>Welcome to My Portfolio</h1>
         <p style={{ color: toglemode ? "#333" : "#fff" }}>Heres a glimpse of my resume:</p>
         {/* Render the resume component */}

@@ -10,7 +10,7 @@ function Resume() {
       className="resume"
       style={{
         color: toglemode ? "#333" : "#fff",
-        height: "1400px",
+        height: "auto",
         border: "2px solid",
         padding: "20px",
         margin: "0 auto", // Center the content horizontally
