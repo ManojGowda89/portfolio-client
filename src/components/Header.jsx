@@ -20,7 +20,7 @@ function Header({ changetogle, toggle }) {
         {user && <Nav.Link as={Link}  to="/admin" style={{ color: "#fff" }}>Admin</Nav.Link>}
             <Nav.Link as={Link} to="/projects" style={{ color: "#fff" }}>Projects</Nav.Link>
             <Nav.Link as={Link} to="/gmail" style={{ color: "#fff" }}>Contact</Nav.Link>
-            <Nav.Link as={Link} to="https://firebasestorage.googleapis.com/v0/b/projects-4f71b.appspot.com/o/Manoj%20Gowda%20(2).pdf?alt=media&token=17301b47-e19d-437a-a67e-a8f1e9bb86f4" style={{ color: "#fff" }}>Resume</Nav.Link>
+            <Nav.Link as={Link} to="https://firebasestorage.googleapis.com/v0/b/projects-4f71b.appspot.com/o/manojgowda.onrender_com.pdf?alt=media&token=a9ead31f-6f44-4e73-8c33-0f0626c56b3c" style={{ color: "#fff" }}>Resume</Nav.Link>
            
          
             <Nav.Link onClick={changetogle} style={{ color: "#fff" }}><input type="checkbox" className="checkbox" id="checkbox" style={{ opacity: 0, position: "absolute" }} />
