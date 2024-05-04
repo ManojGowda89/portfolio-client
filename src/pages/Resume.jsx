@@ -70,7 +70,7 @@ function Resume() {
       </h6>
 
       <p>
-        <strong>CompSoft Technologies</strong> - Nov. 2023 – Jun.2024
+        <strong>CompSoft Technologies</strong> - Nov. 2023 – Dec.2023
       </p>
       <p>Software Developer — (Reactjs, Nodejs(Express.js), MongoDB, MySQL)</p>
 
