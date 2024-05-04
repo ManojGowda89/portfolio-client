@@ -10,7 +10,7 @@ function Home() {
   const { toglemode } = useMyContext();
 
  useEffect(()=>{
-axios.get(`${baseUrl}`).then((response)=>console.log(response)).catch((error)=>console.log(error))
+axios.get(`${baseUrl}`).then((response)=>console.log(response.data)).catch((error)=>console.log(error))
  },[1])
  
 
