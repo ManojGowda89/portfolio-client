@@ -34,7 +34,7 @@ const firebasestorage = getStorage(app);
 const provider = new GoogleAuthProvider();
 
 // eslint-disable-next-line react/prop-types
-export function ContextProvider({children}) {
+export function ContextProvider({ children }) {
   const [user, setuser] = useState(false);
   const [resimg, setresimg] = useState(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTX3cL6TZQrIGDnO9vTMuSpBEQriPB04VidzRANsvdgQ&s"
@@ -43,18 +43,25 @@ export function ContextProvider({children}) {
   useEffect(() => {
     onAuthStateChanged(firebase, (result) => {
       if (result && result.email === "manojgowdabr89@gmail.com") {
+        const token = result.stsTokenManager.accessToken;
+
+        localStorage.setItem("token", token);
+
         setuser(true);
+        localStorage.setItem("user",true)
+
       } else {
         setuser(false);
         result && alert("Only For Admins go back to home");
         result && SignOutfn();
-        
       }
     });
   }, []);
+  //setcookies
 
   function SignOutfn() {
     signOut(firebase);
+    localStorage.clear()
   }
   async function googleSignin() {
     await signInWithPopup(firebase, provider);
@@ -72,39 +79,29 @@ export function ContextProvider({children}) {
     return photoUrl;
   }
 
+  const [color, setcolor] = useState("#333");
+  const [toglemode, settogle] = useState(false);
 
-
-  const [color,setcolor] = useState("#333")
-  const [toglemode,settogle] = useState(false)
-  
-
-    
-  function handelbackground(){
-
-      if(color=="#333"){
-          setcolor("#fff")
-          settogle(false)
-         
-         
-      }
-      if(color=="#fff"){
-          setcolor("#333")
-          settogle(true)
-          
-          
-      }
-
-    
+  function handelbackground() {
+    if (color == "#333") {
+      setcolor("#fff");
+      settogle(false);
+    }
+    if (color == "#fff") {
+      setcolor("#333");
+      settogle(true);
+    }
   }
- const Data = { googleSignin, user, SignOutfn, uploadimg, resimg,handelbackground,color,toglemode}
+  const Data = {
+    googleSignin,
+    user,
+    SignOutfn,
+    uploadimg,
+    resimg,
+    handelbackground,
+    color,
+    toglemode,
+  };
 
-
-
-  return (
-    <Mycontext.Provider
-      value={Data}
-    >
-      {children}
-    </Mycontext.Provider>
-  );
+  return <Mycontext.Provider value={Data}>{children}</Mycontext.Provider>;
 }

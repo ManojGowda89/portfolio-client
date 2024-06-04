@@ -9,6 +9,7 @@ import axios from "axios";
 import { baseUrl } from "../server.jsx";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import Layout from "../components/Layout.jsx";
+import { Link } from "react-router-dom";
 
 export default function Admin() {
   const { toglemode } = useMyContext();
@@ -62,7 +63,7 @@ export default function Admin() {
       .then((result) => {
         if (result) {
           setload(false);
-          window.location.reload()
+          
         }
       })
 
@@ -76,7 +77,12 @@ export default function Admin() {
 
   useEffect(() => {
     axios
-      .get(`${baseUrl}/getprojects`)
+      .get(`${baseUrl}/getprojects`,{
+        headers: {
+          firebase: `${localStorage.getItem("token")}`,
+        },
+
+      })
       .then((result) => {
         // Assuming result.data is an array of projects
         setProjects(result.data);
@@ -86,7 +92,12 @@ export default function Admin() {
         console.error("Error fetching projects:", error);
       });
 
-      axios.get(`${baseUrl}/mymails`).then((result) =>setmails(result.data)).catch((error) =>console.log(error))
+      axios.get(`${baseUrl}/mymails`,{
+        headers: {
+          firebase: `${localStorage.getItem("token")}`,
+        },
+
+      }).then((result) =>setmails(result.data)).catch((error) =>console.log(error))
   }, []);
   const handleServerSideChange = (e) => {
     setServerSide(e.target.checked);
@@ -105,12 +116,14 @@ export default function Admin() {
       
         <Container>
         <hr  style={{ color: toglemode ? "#333" : "#fff",height:"20px"}} />
-        <h1 style={{ color: toglemode ? "#333" : "#fff" }}>Mails</h1>
+        <Link to="https://docs.google.com/spreadsheets/d/1IAcdVSzMm4lACby0UTdJrieMSwpQjsRj4Qu1wHruLk8/edit?resourcekey#gid=1262485084" style={{ color: toglemode ? "#333" : "#fff" }}><h1>Mails</h1></Link>
+        
          <div className="Mails">
          
          <div className="row row-cols-1 row-cols-md-2 g-4">
          {mails.map((data, index) => (
            <div key={index} className="col">
+
              <Card
                style={{
                  width: "35rem",

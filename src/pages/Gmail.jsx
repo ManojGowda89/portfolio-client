@@ -1,4 +1,4 @@
-import { useState } from "react";
+  import { useState } from "react";
 import Layout from "../components/Layout";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
@@ -68,7 +68,7 @@ export default function Gmail() {
         <h2 className="mb-4">Send an Email</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formFromAddress">
-            <Form.Label>From Address</Form.Label>
+            <Form.Label>Your Mail Id</Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter your email address"

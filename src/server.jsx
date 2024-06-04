@@ -1,4 +1,4 @@
-export const baseUrl = "https://server-porfolio.onrender.com";
+export const baseUrl = "http://localhost:3000";
 
 
 

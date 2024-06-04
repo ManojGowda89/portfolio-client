@@ -1,6 +1,6 @@
-import { useMyContext } from "../firebase/config.jsx";
-
 import { Link } from "react-router-dom";
+import { useMyContext } from "../firebase/config.jsx";
+import "./Resume.css";  // Ensure this path is correct
 
 function Resume() {
   const { toglemode } = useMyContext();
@@ -13,124 +13,104 @@ function Resume() {
         height: "auto",
         border: "2px solid",
         padding: "20px",
-        margin: "0 auto", // Center the content horizontally
-        maxWidth: "900px", // Set maximum width for better readability
+        margin: "0 auto",
+        maxWidth: "900px",
       }}
     >
       <h1>Manoj Gowda B R</h1>
       <p>
-        9513849323 |{" "}
+       <Link to="/gmail"  style={{ color: toglemode ? "#333" : "#fff" }} >manojgowda8951@gmail.com</Link> |<Link   style={{ color: toglemode ? "#333" : "#fff" } }>9513849323</Link> |{" "}
         <Link
-          href="https://www.linkedin.com/in/Manojgowda"
+          to="https://www.linkedin.com/in/manojgowdabr89"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: toglemode ? "#333" : "#fff" }}
         >
-          linkedin@Manojgowda
+          LinkedIn/manojgowdabr89
         </Link>{" "}
         |{" "}
-        <Link
-          href="https://github.com/Manojgowda"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: toglemode ? "#333" : "#fff" }}
-        >
-          Github@Manojgowda
-        </Link>{" "}
-        |{" "}
-        <Link
-          href="https://wa.me/9513849323"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: toglemode ? "#333" : "#fff" }}
-        >
-          Whatsapp@Manojgowda
-        </Link>
+       
+          <Link to="https://wa.me/9513849323"  style={{ color: toglemode ? "#333" : "#fff" }}>WhatsApp</Link>
+       
       </p>
-      <h2>EDUCATION</h2>
-      <p>AMC Engineering College, Bangalore, India</p>
-      <p>
-        Bachelor of Engineering, Computer Science And Engineering, 2020 – 2024
-      </p>
-      <p>SSPU College of Science, Tumkur, India</p>
-      <p>PU, PCMB, 2018 - 2020</p>
       <h2>EXPERIENCE</h2>
       <p>
-        <strong>Delbo Digital Pvt Ltd</strong> - Jun. 2022 – Sep.2023
+        <strong>Full Stack Developer (MERN Stack)</strong>
+        <br />
+        <strong>CompSoft Technologies-Intern</strong> - August 2023 - November 2023, Bangalore
       </p>
-      <p>Software Developer — (Reactjs, Nodejs(Express.js), MongoDB)</p>
-
-      <h6>
-        APIs and third-party libraries to enhance application functionality and
-        performance
-      </h6>
-      <h6>
-        Designed and implemented MongoDB database schemas, proficient in CRUD
-        operations and data modeling using Mongoose ODM in Node.js applications.
-      </h6>
-
+      <ul className="no-bullets">
+        <li>Utilized React.js to create reusable components, enhancing code maintainability and facilitating the development of dynamic user interfaces.</li>
+        <li>Implemented authentication and authorization middleware in Node.js (Express.js) for secure user authentication and access control in web applications.</li>
+      </ul>
       <p>
-        <strong>CompSoft Technologies</strong> - Nov. 2023 – Jun.2024
+        <strong>Full Stack Developer-Intern</strong>
+        <br />
+        <strong>Delbo Digital Pvt Ltd (React.js, JavaScript)</strong> - April 2023 - July 2023, Bangalore
       </p>
-      <p>Software Developer — (Reactjs, Nodejs(Express.js), MongoDB, MySQL)</p>
-
-      <h6>
-        Utilized React.js to create reusable components, enhancing code
-        maintainability and facilitating the development of dynamic user
-        interfaces.
-      </h6>
-      <h6>
-        Implemented authentication and authorization middleware in Node.js
-        (Express.js) for secure user authentication and access control in web
-        applications.
-      </h6>
-
+      <ul className="no-bullets">
+        <li>Managed component state effectively using React's useState hook for dynamic and interactive UI elements.</li>
+        <li>Handled side effects, data fetching, and component lifecycle events using React's useEffect and useState hook.</li>
+      </ul>
       <h2>PROJECTS</h2>
       <p>
-        <strong>Car DealerShip Website</strong> - March 2023 – NOV 2023
+        <strong>Car Dealership Website</strong>
+        <br />
+        Reactjs, Nodejs, Express, Mongoose, Context API
       </p>
-
-      <h6>
-        Developed Link full-stack application using with Node serving Link REST
-        API with React as the frontend.
-      </h6>
-      <h6>Custom Auth verification using sessions</h6>
-      <h6>Used Context Api and MVC architecture For state Management.</h6>
-      <h6>Integrated payment gateway for online payments.</h6>
-
+      <ul className="no-bullets">
+        <li>Developed a full-stack application using Node serving a REST API with React as the frontend.</li>
+        <li>Custom Auth verification using sessions.</li>
+        <li>Used Context API and MVC architecture for state management.</li>
+        <li>Integrated payment gateway for online payments.</li>
+      </ul>
       <p>
-        <strong>UPI QR Gen and Scan</strong> - May 2021 – Sep 2021
+        <strong>Weather App</strong>
+        <br />
+        Open Weather API and React.js
       </p>
-
-      <h6>
-        Developed Link Web application for generating QR code for upi Payments
-      </h6>
-
+      <ul className="no-bullets">
+        <li>Created a web application that displays all parameters of weather like humidity, wind speed, etc.</li>
+      </ul>
       <p>
-        <strong>Weather App</strong> - Jan 2023 – March 2023
+        <strong>URL Shortener</strong>
+        <br />
+        Node.js, Express, MongoDB, Pug.js
       </p>
-
-      <h6>
-        Created an web application which displays all parameters of Weather like
-        Humidity,Wind Speed ,etc.
-      </h6>
-
+      <ul className="no-bullets">
+        <li>Built a full-stack URL shortener using Node.js, Express.js, MongoDB, and Pug.js, with custom URL aliasing and analytics.</li>
+        <li>Deployed on a cloud platform, implementing performance optimizations and security measures for reliability.</li>
+      </ul>
       <p>
-        <strong>Online Doctor Appointment (Skylabs)</strong> - May 2022 – Sep
-        2022
+        <strong>Online Doctor Appointment (Skylabs)</strong>
+        <br />
+        HTML, CSS, JavaScript, PHP
       </p>
-
-      <h6>
-        Developed Link web application for booking doctors and medicines online.
-      </h6>
-      <h6>
-        This web application uses payment gateways for accepting payments.
-      </h6>
-
-      <h2>TECHNICAL SKILLS</h2>
-      <p>Languages: JavaScript, NoSql, Sql, CSS, HTML, Java, PHP;</p>
-      <p>Frameworks: Reactjs, Nodejs, Expressjs, MongoDB, Bootstrap</p>
-      <p>Developer Tools: Git, AWS, Firebase</p>
+      <ul className="no-bullets">
+        <li>Developed a web application for booking doctors and medicines online.</li>
+        <li>This web application uses payment gateways for accepting payments.</li>
+      </ul>
+      <h2>EDUCATION</h2>
+      <p>
+        <strong>Bachelor of Engineering</strong>
+        <br />
+        AMC Engineering College, Bangalore, 2024, 7.9 CGPA
+      </p>
+      <h2>INVOLVEMENT</h2>
+      <p>
+        <strong>mb64-connect</strong>
+        <br />
+        npm install mb64-connect
+      </p>
+      <ul className="no-bullets">
+        <li>Developed and published mb64-connect, an npm package for seamless MongoDB connection.</li>
+        <li>Enabled straightforward integration with <code>npm install mb64-connect</code> for easy database connectivity.</li>
+      </ul>
+      <h2>SKILLS</h2>
+      <p>Programming Languages: HTML, CSS, JavaScript</p>
+      <p>Frameworks: React.js, Node.js</p>
+      <p>Libraries: Express.js, Mongoose</p>
+      <p>Tools: GitHub, Firebase, Render, NPM</p>
     </div>
   );
 }
