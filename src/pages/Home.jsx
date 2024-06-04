@@ -2,11 +2,16 @@
 import { useMyContext } from "../firebase/config.jsx";
 import Layout from "../components/Layout";
 import Resume from "./Resume";
-
+import { useEffect } from "react";
+import { baseUrl } from "../server.jsx";
+import axios from "axios"
 
 function Home() {
   const { toglemode } = useMyContext();
 
+ useEffect(()=>{
+axios.get(`${baseUrl}`).then((response)=>console.log(response.data)).catch((error)=>console.log(error))
+ },[1])
  
 
   return (
