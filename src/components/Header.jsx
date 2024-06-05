@@ -19,7 +19,7 @@ function Header({ changetogle, toggle }) {
           {user ?   <Nav.Link as={Link} onClick={SignOutfn} to="/" style={{ color: "#fff" }}>Logout</Nav.Link>  :  <Nav.Link as={Link} onClick={googleSignin} to="/admin" style={{ color: "#fff" }}>Login</Nav.Link>}
         {user && <Nav.Link as={Link}  to="/admin" style={{ color: "#fff" }}>Admin</Nav.Link>}
             <Nav.Link as={Link} to="https://github.com/ManojGowda89?tab=repositories" style={{ color: "#fff" }}>Projects</Nav.Link>
-            <Nav.Link as={Link} to="https://docs.google.com/forms/d/e/1FAIpQLSdxHlFaQm2bH1HvQWH1r1aKwCr_yPBOWUm9pu7JBK4WjuJktA/viewform?usp=sf_link" style={{ color: "#fff" }}>Contact</Nav.Link>
+            <Nav.Link as={Link} to="https://www.linkedin.com/in/manojgowdabr89" style={{ color: "#fff" }}>Contact</Nav.Link>
             <Nav.Link as={Link} to="https://firebasestorage.googleapis.com/v0/b/projects-4f71b.appspot.com/o/manojgowda8951.pdf?alt=media&token=336d8791-29f6-4819-bdd8-52a090482696" style={{ color: "#fff" }}>Resume</Nav.Link>
            
          
