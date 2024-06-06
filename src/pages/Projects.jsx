@@ -1,20 +1,35 @@
-import { useEffect, useState } from "react";
-import Layout from "../components/Layout.jsx";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import { baseUrl } from "../server.jsx";
-import axios from "axios";
-import { useMyContext } from "../firebase/config.jsx";
+// import { useEffect, useState } from "react";
+// import Layout from "../components/Layout.jsx";
+// import Button from "react-bootstrap/Button";
+// import Card from "react-bootstrap/Card";
+// import { baseUrl } from "../server.jsx";
+// import axios from "axios";
+// import { useMyContext } from "../firebase/config.jsx";
+
+import React, { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Projects() {
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+            window.location.href = "https://github.com/ManojGowda89?tab=repositories";
+        }, 1500); // 2-second delay for demonstration
+    }, []);
 
-  window.location.href="https://github.com/ManojGowda89?tab=repositories"
-
-
-
-
+    return (
+        <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh', backgroundColor: '#000' }}>
+            {loading && (
+                <div className="spinner-border text-light" role="status">
+                    <span className="sr-only"></span>
+                </div>
+            )}
+        </div>
+    );
 }
+
 
 
 

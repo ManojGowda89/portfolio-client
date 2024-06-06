@@ -19,19 +19,8 @@ function Resume() {
     >
       <h1>Manoj Gowda B R</h1>
       <p>
-       <Link to="/"  style={{ color: toglemode ? "#333" : "#fff" }} >manojgowda8951@gmail.com</Link> |<Link   style={{ color: toglemode ? "#333" : "#fff" } }>9513849323</Link> |{" "}
-        <Link
-          to="https://www.linkedin.com/in/manojgowdabr89"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: toglemode ? "#333" : "#fff" }}
-        >
-          LinkedIn/manojgowdabr89
-        </Link>{" "}
-        |{" "}
-       
-          <Link to="https://wa.me/9513849323"  style={{ color: toglemode ? "#333" : "#fff" }}>WhatsApp</Link>
-       
+        Mailme : 
+       <Link style={{ color: toglemode ? "#333" : "#fff" }}>  manojgowda8951@gmail.com || manojgowdabr89@gmail.com</Link>
       </p>
       <h2>EXPERIENCE</h2>
       <p>

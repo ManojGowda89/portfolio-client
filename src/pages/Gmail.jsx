@@ -1,18 +1,32 @@
-  import { useState } from "react";
-import Layout from "../components/Layout";
-import { Form, Button } from "react-bootstrap";
-import axios from "axios";
-import { baseUrl } from "../server.jsx";
+//   import { useState } from "react";
+// import Layout from "../components/Layout";
+// import { Form, Button } from "react-bootstrap";
+// import axios from "axios";
+// import { baseUrl } from "../server.jsx";
 
+
+import React, { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Gmail() {
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+            window.location.href = "https://wa.me/9513849323";
+        }, 1500); // 2-second delay for demonstration
+    }, []);
 
-  window.location.href=" https://wa.me/9513849323"
-
-
-
-
+    return (
+        <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh', backgroundColor: '#000' }}>
+            {loading && (
+                <div className="spinner-border text-light" role="status">
+                    <span className="sr-only"></span>
+                </div>
+            )}
+        </div>
+    );
 }
 
 //   const[tost,settost]=useState(false)
