@@ -10,9 +10,8 @@ import Home from "./pages/Home.jsx";
 import Gmail from "./pages/Gmail.jsx";
 import { useMyContext } from "./firebase/config.jsx";
 
-
-
-
+import Resumelink from "./pages/Resumelink.jsx";
+import Linkedin from "./pages/Linkedin.jsx";
 
 export default function App(){
 
@@ -30,7 +29,7 @@ export default function App(){
           errorElement: <h1>Page Not Found</h1>,
         },
         {
-          path: "/projects",
+          path: "/github",
           element: <Projects />,
         },
         {
@@ -43,9 +42,16 @@ export default function App(){
           element: <Loadingreact />,
         },
         {
-          path: "/gmail",
-          element: <Gmail />,
+          path: "/whatsapp",
+          element: <Gmail/>,
         },
+        {
+          path:"/resume",
+          element:<Resumelink/>,
+        },{
+          path:"/linkedin",
+          element:<Linkedin/>,
+        }
       ]);
 
 

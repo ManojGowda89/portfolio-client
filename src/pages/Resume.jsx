@@ -19,7 +19,7 @@ function Resume() {
     >
       <h1>Manoj Gowda B R</h1>
       <p>
-       <Link to="/gmail"  style={{ color: toglemode ? "#333" : "#fff" }} >manojgowda8951@gmail.com</Link> |<Link   style={{ color: toglemode ? "#333" : "#fff" } }>9513849323</Link> |{" "}
+       <Link to="/"  style={{ color: toglemode ? "#333" : "#fff" }} >manojgowda8951@gmail.com</Link> |<Link   style={{ color: toglemode ? "#333" : "#fff" } }>9513849323</Link> |{" "}
         <Link
           to="https://www.linkedin.com/in/manojgowdabr89"
           target="_blank"
